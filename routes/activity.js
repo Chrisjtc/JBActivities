@@ -78,7 +78,8 @@ function logData( req, http_result ) {
  */
 exports.edit = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );;
+    console.log( "Request Type: Edit" );
+    console.log( req.body );
     res.send( 200, 'Edit' );
 };
 
@@ -87,7 +88,8 @@ exports.edit = function( req, res ) {
  */
 exports.save = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log( "Request Type: Save" );
+    console.log( req.body );
     res.send( 200, 'Save' );
 };
 
@@ -121,6 +123,8 @@ function isMC_API(url) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function( req, res ) {
+	console.log( "Request Type: execute" );
+	console.log(req.body);
 	//console.log('body',util.inspect(req.body, {showHidden: false, depth: null}));
 	//console.log('body',JSON.stringify(req.body));
 	
@@ -231,7 +235,8 @@ exports.execute = function( req, res ) {
  */
 exports.publish = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );;
+    console.log("Request Type: publish");
+    console.log( req.body );;
     res.send( 200, 'Publish' );
 };
 
@@ -240,6 +245,7 @@ exports.publish = function( req, res ) {
  */
 exports.validate = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log("Request Type: validate");
+    console.log( req.body );
     res.send( 200, 'Validate' );
 };

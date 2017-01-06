@@ -112,9 +112,13 @@ app.get( '/ixn/activities/hello-world/config.json', function( req, res ) {
 
 //replace template values with environment variables.
 app.get( '/ixn/activities/hello-world/index.html', function( req, res ) {
+    console.log( "Request Type: Edit" );
+    console.log( req.body );
 	res.status(200).send( indexhtml );		
 });
 app.get( '/ixn/activities/hello-world/', function( req, res ) {
+    console.log( "Request Type: Edit" );
+    console.log( req.body );
 	res.status(200).send( indexhtml );		
 });
 
